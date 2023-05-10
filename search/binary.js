@@ -32,7 +32,38 @@ function binarySearch(arr, searchVal) {
     return -1;
 }
 
+function binarySearchRecursion(arr, low, high, searchVal){
+    if (low <= high) {
+        let mid = low + Math.floor((high - low) / 2);
+ 
+        // If the element is present at the middle
+        // itself
+        if (arr[mid] == searchVal) {
+            return mid;
+        }
+ 
+        // If element is smaller than mid, then
+        // it can only be present in left subarray
+        if (arr[mid] > searchVal) {
+            return binarySearch(arr, low, mid - 1, searchVal);
+        }
+ 
+        // Else the element can only be present
+        // in right subarray
+        if (arr[mid] < searchVal) {
+            return binarySearch(arr, mid + 1, high, searchVal);
+        }
+    }
+
+    return -1;
+}
+
 console.log(arr);
+// for (let i = 0; i < arr.length; i++) {
+//     console.log(`value: ${arr[i]}, Index: ${binarySearch(arr, arr[i])}`);
+// }
+
+
 for (let i = 0; i < arr.length; i++) {
-    console.log(`value: ${arr[i]}, Index: ${binarySearch(arr, arr[i])}`);
+    console.log(`value: ${arr[i]}, Index: ${binarySearchRecursion(arr, 0, arr.length, arr[i])}`);
 }
