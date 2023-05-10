@@ -1,7 +1,6 @@
 let arr = [6, -3, 10, 2, -7, 4, 1, 8, -5];
 
 function insertionSort(arr) {
-	// Insertion sort code here
 	for (let i = 1; i < arr.length; i++) {
 		let key = arr[i];
 		let j = i - 1;
