@@ -4,7 +4,7 @@ function bubbleSort(arr) {
     for (let i = 0; i < arr.length - 1; i++) {
         let swapped = false;
 
-        for (let j = 0; j < arr.length - i - 1; j++) {
+        for (let j = 0; j < arr.length - 1 - i; j++) {
             if (arr[j] > arr[j + 1]) {
                 let tmp = arr[j + 1];
                 arr[j + 1] = arr[j];
@@ -21,4 +21,25 @@ function bubbleSort(arr) {
     return arr;
 }
 
-console.log(bubbleSort(arr));
+function bubbleSortReverse(arr) {
+    for (let i = 0; i < arr.length - 1; i++) {
+        let swapped = false;
+
+        for (let j = arr.length - 1; j > i; j--) {
+            if (arr[j] < arr[j - 1]) {
+                let tmp = arr[j - 1];
+                arr[j - 1] = arr[j];
+                arr[j] = tmp;
+                swapped = true;
+            }
+        }
+
+        if (swapped == false) {
+            break;
+        }
+    }
+
+    return arr;
+}
+
+console.log(bubbleSortReverse(arr));
