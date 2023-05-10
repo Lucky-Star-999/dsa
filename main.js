@@ -1,5 +1,8 @@
+// Recursion
+require("./recursion/practice1")
+
 // Search Algorithms
-require("./search/binary")
+// require("./search/binary")
 
 // Sort Algorithms
 // require("./sort/insertion")
