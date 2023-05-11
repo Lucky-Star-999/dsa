@@ -31,7 +31,7 @@ class LinkedList {
     removeLast() {
         let currentNode = this.head;
         while (currentNode.next != null) {
-            if(currentNode.next.next == null){
+            if (currentNode.next.next == null) {
                 currentNode.next = null;
                 break;
             } else {
