@@ -31,17 +31,11 @@ class Stack {
     }
 
     isEmpty() {
-        if (this.currentSize === 0) {
-            return true;
-        }
-        return false;
+        return this.currentSize === 0;
     }
 
     isFull() {
-        if (this.currentSize >= this.capacity) {
-            return true;
-        }
-        return false;
+        return this.currentSize >= this.capacity;
     }
 
     peek() {

@@ -1,5 +1,6 @@
 // Data Structure
-require("./data-structure/stack")
+// require("./data-structure/stack")
+require("./data-structure/queue")
 
 // Recursion
 // require("./recursion/practice1")
