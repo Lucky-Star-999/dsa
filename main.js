@@ -1,5 +1,8 @@
+// Data Structure
+require("./data-structure/stack")
+
 // Recursion
-require("./recursion/practice1")
+// require("./recursion/practice1")
 
 // Search Algorithms
 // require("./search/binary")
